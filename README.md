@@ -1,4 +1,7 @@
 # packer-plugin-file-use-to-build-an-image-
+# for installation on your local   https://developer.hashicorp.com/packer/tutorials/aws-get-started/get-started-install-cli
+
+#https://developer.hashicorp.com/packer/tutorials/aws-get-started/aws-get-started-build-image
 
 
 # Write Packer template
@@ -51,10 +54,14 @@ build {
 /*
 #This is a complete Packer template that you will use to build an AWS Ubuntu AMI in the us-west-2 region. In the following sections, you will review each #block of this template in more detail.
 
+
+
 #Packer Block
 #The packer {} block contains Packer settings, including specifying a required Packer version.
 
+
 In addition, you will find required_plugins block in the Packer block, which specifies all the plugins required by the template to build your image. Even though Packer is packaged into a single binary, it depends on plugins for much of its functionality. Some of these plugins, like the Amazon AMI Builder (AMI builder) which you will to use, are built, maintained, and distributed by HashiCorp — but anyone can write and use plugins.
+
 
 Each plugin block contains a version and source attribute. Packer will use these attributes to download the appropriate plugin(s).
 
@@ -62,10 +69,14 @@ The source attribute is only necessary when requiring a plugin outside the Hashi
 The version attribute is optional, but we recommend using it to constrain the plugin version so that Packer does not install a version of the plugin that does not work with your template. If you do not specify a plugin version, Packer will automatically download the most recent version during initialization.
 In the example template above, Packer will use the Packer Amazon AMI builder plugin that is greater than version 0.0.2.
 
+
+
 Source block
 The source block configures a specific builder plugin, which is then invoked by a build block. Source blocks use builders and communicators to define what kind of virtualization to use, how to launch the image you want to provision, and how to connect to it. Builders and communicators are bundled together and configured side-by-side in a source block. A source can be reused across multiple builds, and you can use multiple sources in a single build. A builder plugin is a component of Packer that is responsible for creating a machine and turning that machine into an image.
 
+
 A source block has two important labels: a builder type and a name. These two labels together will allow us to uniquely reference sources later on when we define build runs.
+
 
 In the example template, the builder type is amazon-ebs and the name is ubuntu.
 */
